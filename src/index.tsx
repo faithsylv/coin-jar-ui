@@ -1,7 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import App from './components/App';
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+
+import FindFriends from "./components/pages/FindFriends"
+import CreateJar from "./components/pages/CreateJar"
+
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(
@@ -9,7 +14,14 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App/>}>
+          <Route path="/find-friends" element={<FindFriends/>}/>
+          <Route path="/create-jar" element={<CreateJar/>}/>
+        </Route>
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
