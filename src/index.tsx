@@ -4,7 +4,7 @@ import './index.css';
 import App from './components/App';
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 
-import Jars from "./components/pages/Jars"
+import MyJars from "./components/pages/MyJars"
 import FindFriends from "./components/pages/FindFriends"
 import CreateJar from "./components/pages/CreateJar"
 
@@ -18,7 +18,7 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App/>}>
-          <Route index element={ <Jars/>}/>
+          <Route index element={ <MyJars/>}/>
           <Route path="/find-friends" element={<FindFriends/>}/>
           <Route path="/create-jar" element={<CreateJar/>}/>
         </Route>
